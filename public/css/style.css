@@ -13,9 +13,6 @@
         transform: translateY(10px);
     }
 }
-.theme{
-    cursor: pointer;
-}
 .theme:hover .card-btn{
     display: block;
 }

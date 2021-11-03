@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8"> 
+    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
@@ -9,13 +10,199 @@
     <link rel="stylesheet" href="assets/bootstrap-5.1.3/css/bootstrap.css">
     <link rel="stylesheet" href="assets/tailwind/tailwind.css">
     <link rel="stylesheet" href="assets/animate-css/animate.min.css">
+    <script src="assets/jquery/jquery.js"></script>
 </head>
+
 <body>
     {{>navbar}}
 
+    <center>
+        <h1 class="text-3xl p-4">Edit Your Resume Here</h1>
+    </center>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 shadow p-4">
+                <center>
+                    <h1 class="text-2xl p-2">Personal info</h1>
+                </center>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <input type="text" class="form-control m-1" required name="firstname" id="fname"
+                            placeholder="Firstname">
+                    </div>
+                    <div class="col-lg-6">
+                        <input type="text" class="form-control m-1" name="lastname" id="fname" placeholder="Lastname">
+                    </div>
+                    <div class="col-lg-6">
+                        <input type="email" class="form-control m-1" name="email" id="fname"
+                            placeholder="Email address">
+                    </div>
+                    <div class="col-lg-6">
+                        <input type="number" class="form-control m-1" name="phonenumber" id="fname"
+                            placeholder="Phone number">
+                    </div>
+                    <div class="col-lg-6">
+                        <input type="text" class="form-control m-1" name="website" id="website"
+                            placeholder="Personal Blog or Website">
+                    </div>
+                    <div class="col-lg-6">
+                        <input type="text" class="form-control m-1" name="gitrepo" id="gitrepo"
+                            placeholder="Github repo">
+                    </div>
+                    <div class="col-lg-12">
+                        <input type="text" class="form-control m-1" name="gitrepo" id="gitrepo"
+                            placeholder="Your home address">
+                    </div>
+                </div>
+                <!--Experience-->
+                <center>
+                    <h1 class="text-2xl p-2">Experience</h1>
+                </center>
+                <div class="row" id="experienceSection">
+                    <div class="col-lg-12">
+                        <input type="text" name="position" id="position" class="form-control m-1"
+                            placeholder="Your Position">
+                    </div>
+                     <div class="col-lg-6">
+                        <h1 class="m-1">From date</h1>
+                        <input type="date" name="fromdate" id="datefrom" class="form-control m-1"
+                            placeholder="From date">
+                    </div>
+                    <div class="col-lg-6">
+                        <h1 class="m-1">To date</h1>
+                        <input type="date" name="todate" id="dateto" class="form-control m-1" placeholder="To date">
+                    </div>
+                    <div class="col-lg-12">
+                        <input type="text" name="point" id="point1" class="form-control m-1" placeholder="Add point 1">
+                    </div>
+                
+                </div>
+                <div class="col-lg-12 text-center">
+                        <button class="btn btn-primary w-25 m-2" id="addExperiencePoint">+</button>
+                    </div>
+                <!----Education-->
+                <center>
+                    <h1 class="text-2xl p-2">Eduction</h1>
+                </center>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <input type="text" name="clgname" id="clgname" class="form-control m-2" placeholder="College name">
+                    </div>
+                    <div class="col-lg-6">
+                        <input type="text" name="degree" class="form-control m-2" id="degree"
+                            placeholder="Mention your degree">
+                    </div>
+                    <div class="col-lg-6">
+                        <h1 class="m-1">From date</h1>
+                        <input type="date" class="form-control m-2" name="edudatefrom" id="edufromdate">
+                    </div>
+                    <div class="col-lg-6">
+                        <h1 class="m-1">To date</h1>
+                        <input type="date" class="form-control m-2" name="edudateto" id="edutodate">
+                    </div>
+                    <p class="text-lg ml-2 p-2">Add more college</p>
+                    <div class="col-lg-6">
+                        <input type="text" name="clgname" id="clgname" class="form-control m-2" placeholder="College name">
+                    </div>
+                    <div class="col-lg-6">
+                        <input type="text" name="degree" class="form-control m-2" id="degree" placeholder="Mention your degree">
+                    </div>
+                    <div class="col-lg-6">
+                        <h1 class="m-1">From date</h1>
+                        <input type="date" class="form-control m-2" name="edudatefrom" id="edufromdate">
+                    </div>
+                    <div class="col-lg-6">
+                        <h1 class="m-1">To date</h1>
+                        <input type="date" class="form-control m-2" name="edudateto" id="edutodate">
+                    </div>
+                </div>
+
+                <!--Skills-->
+                <center><h1 class="text-2xl p-2">Skills</h1></center>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <input type="text" name="skill" id="skills" class="form-control m-2" placeholder="Add your skill">
+                    </div>
+                    <div class="col-lg-6">
+                        <input type="text" name="skill" id="skills" class="form-control m-2" placeholder="Add your skill">
+                    </div>
+                    <div class="col-lg-6">
+                        <input type="text" name="skill" id="skills" class="form-control m-2" placeholder="Add your skill">
+                    </div>
+                    <div class="col-lg-6">
+                        <input type="text" name="skill" id="skills" class="form-control m-2" placeholder="Add your skill">
+                    </div>
+                    <div class="col-lg-6">
+                        <input type="text" name="skill" id="skills" class="form-control m-2" placeholder="Add your skill">
+                    </div>
+                    <div class="col-lg-6">
+                        <input type="text" name="skill" id="skills" class="form-control m-2" placeholder="Add your skill">
+                    </div>
+                </div>
+
+                <!--Interest-->
+                <center><h1 class="text-2xl p-2">Interest</h1></center>
+                <div class="row" id="interestSection">
+                    <div class="col-lg-6">
+                        <input type="text" name="interest" id="interest1" placeholder="Your interest" class="form-control m-1">
+                    </div>
+                    <div class="col-lg-6">
+                        <input type="text" name="interest" id="interest2" placeholder="Your interest" class="form-control m-1">
+                    </div>
+                    <div class="col-lg-6">
+                        <input type="text" name="interest" id="interest3" placeholder="Your interest" class="form-control m-1">
+                    </div>
+                    <div class="col-lg-6">
+                        <input type="text" name="interest" id="interest4" placeholder="Your interest" class="form-control m-1">
+                    </div>
+                </div>
+                <div class="col-lg-6 text-center">
+                        <button class="add-interest btn btn-primary w-25 m-2" id="addInterest">+</button>
+                    </div>
+            </div>
+
+            <!--Resume section-->
+            <div class="col-lg-6">
+
+            </div>
+
+        </div>
+    </div>
 
     {{>footer}}
+    <script>
+        let iterator = 4;
+        var addInterestClickCount = 0;
+        var createAddInterestField = `<div class='col-lg-6'><input type='text' name='interest' id='interest${iterator}' placeholder='Your interest' class='form-control m-1'></div>`;
+        
+        var experienceIterator = 1;
+        var addExperienceClickCount = 0;
+        var createAddExperienceField = `<div class='col-lg-12'><input type='text' name='point' id='point${experienceIterator}' class='form-control m-1' placeholder='Add point ${experienceIterator}'></div>`;
+       
+        $(document).ready(function (){
+            //add interest points
+            $("#addInterest").click(function (){
+                addInterestClickCount++;
+                if(addInterestClickCount < 6){
+                    iterator = iterator+1;
+                    $("#interestSection").append(createAddInterestField);
+                }
+            });
+
+            //add experience points
+            $("#addExperiencePoint").click(function (){
+                if(addExperienceClickCount < 3){
+                    experienceIterator++;
+                    $("#experienceSection").append(createAddExperienceField);
+                    addExperienceClickCount++;
+                }
+            });
+
+        });
+    </script>
     <script src="js/theme-1/theme-1.js"></script>
     <script src="assets/bootstrap-5.1.3/js/bootstrap.min.js"></script>
 </body>
+
 </html>

@@ -26,7 +26,7 @@ To run tests, run the following command
 
 After running this command, hit to 
 ```bash
-    http://localhost:3000
+  http://localhost:3000
 ```    
 
 By default, server will run on port number 3000.
