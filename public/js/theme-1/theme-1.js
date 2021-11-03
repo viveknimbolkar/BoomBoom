@@ -13,6 +13,8 @@ $(document).ready(function (){
         if(addInterestClickCount < 7){
             iterator = iterator+1;
             $("#interestSection").append(createAddInterestField);
+        } else {
+            document.getElementById("addInterest").style.display = 'none';
         }
     });
 
@@ -22,6 +24,8 @@ $(document).ready(function (){
             experienceIterator++;
             $("#experienceSection").append(createAddExperienceField);
             addExperienceClickCount++;
+        } else {
+            document.getElementById("addExperiencePoint").style.display = 'none';
         }
     });
 
