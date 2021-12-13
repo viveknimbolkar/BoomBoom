@@ -1,5 +1,4 @@
 var date = new Date();
-console.log(date.getFullYear);
 document.getElementById("resumeTodaysDate").innerHTML = `Date: ${date.getDate()}-${date.getMonth()}-${date.getFullYear()}`;
 var iterator = 4;
 var addInterestClickCount  = 0;
@@ -196,11 +195,6 @@ skillSection.addEventListener('keyup', function (event) {
     resumeSkill6.innerHTML = skill6.value;
 
 });
-
-// skill1rating.addEventListener('change',function (){
-//     console.log(skill1rating.value);
-//     resumeSkillRating1.append('&#9679;');
-// });
 
 
 $(skill1rating).change(function () {

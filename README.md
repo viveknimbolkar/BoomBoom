@@ -1,8 +1,8 @@
 
-# BoomBoom
+# ResumeBuilder
 Open source resume maker. Make a perfect resume in just a minute and get your dream job using the free resume builder.
 
-![GitHub watchers](https://img.shields.io/github/watchers/viveknimbolkar/BoomBoom?style=social) ![GitHub commit activity](https://img.shields.io/github/commit-activity/y/viveknimbolkar/BoomBoom?style=plastic)
+![GitHub watchers](https://img.shields.io/github/watchers/viveknimbolkar/ResumeBuilder?style=social) ![GitHub commit activity](https://img.shields.io/github/commit-activity/y/viveknimbolkar/ResumeBuilder?style=plastic)
 ## Features
 
  - 5+ templates of resume

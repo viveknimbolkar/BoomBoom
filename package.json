@@ -1,10 +1,9 @@
 {
-  "name": "boom-boom",
+  "name": "resume-builder",
   "version": "1.0.0",
   "description": "A free offline resume builder.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start-server": "nodemon app.js -e js,css,hbs",
     "build-tailwind-css": "tailwindcss build src/tailwind.css -o public/assets/tailwind/tailwind.css"
   },
@@ -22,8 +21,8 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
-    "font-awesome": "^4.7.0",
     "hbs": "^4.1.2",
+    "mysql": "^2.18.1",
     "tailwindcss": "^2.2.19"
   }
 }
