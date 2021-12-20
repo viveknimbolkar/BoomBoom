@@ -1,18 +1,18 @@
 var date = new Date();
 document.getElementById("resumeTodaysDate").innerHTML = `Date: ${date.getDate()}-${date.getMonth()}-${date.getFullYear()}`;
 var iterator = 4;
-var addInterestClickCount  = 0;
+var addInterestClickCount = 0;
 var createAddInterestField = `<div class='col-lg-6'><input type='text' name='interest' id='interest${iterator}' placeholder='Your interest' class='form-control m-1'></div>`;
 
-var experienceIterator       = 1;
-var addExperienceClickCount  = 0;
+var experienceIterator = 1;
+var addExperienceClickCount = 0;
 
-$(document).ready(function (){
+$(document).ready(function () {
     //add interest points
-    $("#addInterest").click(function (){
+    $("#addInterest").click(function () {
         addInterestClickCount++;
-        if(addInterestClickCount < 7){
-            iterator = iterator+1;
+        if (addInterestClickCount < 7) {
+            iterator = iterator + 1;
             $("#interestSection").append(createAddInterestField);
         } else {
             document.getElementById("addInterest").style.display = 'none';
@@ -20,10 +20,10 @@ $(document).ready(function (){
     });
 
     //add experience points
-    $("#addExperiencePoint").click(function (){
+    $("#addExperiencePoint").click(function () {
         if (addExperienceClickCount < 3) {
-            experienceArray[addExperienceClickCount+1].style.display = 'block';
-            resumeExperienceArray[addExperienceClickCount+1].style.display = 'block';
+            experienceArray[addExperienceClickCount + 1].style.display = 'block';
+            resumeExperienceArray[addExperienceClickCount + 1].style.display = 'block';
             addExperienceClickCount++;
         } else {
             document.getElementById("addExperiencePoint").style.display = 'none';
@@ -37,10 +37,10 @@ var personalDetailSection = document.getElementById("personalDetailSection");
 var username = document.getElementById("username");
 var role = document.getElementById("role");
 var email = document.getElementById("email");
-var website   = document.getElementById("website");
-var gitrepo   = document.getElementById("gitrepo");
-var phoneno   = document.getElementById("phonenumber");
-var address   = document.getElementById("address");
+var website = document.getElementById("website");
+var gitrepo = document.getElementById("gitrepo");
+var phoneno = document.getElementById("phonenumber");
+var address = document.getElementById("address");
 
 // Experience
 var experienceSection = document.getElementById("experienceSection");
@@ -52,32 +52,32 @@ var point1 = document.getElementById("point1");
 var point2 = document.getElementById("point2");
 var point3 = document.getElementById("point3");
 var point4 = document.getElementById("point4");
-var experienceArray = [point1,point2, point3, point4];
+var experienceArray = [point1, point2, point3, point4];
 
 // Education
 var educationSection = document.getElementById("educationSection");
-var collegeName  = document.getElementById("clgname");
-var degree       = document.getElementById("degree");
-var eduFromDate  = document.getElementById("edufromdate");
-var eduToDate    = document.getElementById("edutodate");
+var collegeName = document.getElementById("clgname");
+var degree = document.getElementById("degree");
+var eduFromDate = document.getElementById("edufromdate");
+var eduToDate = document.getElementById("edutodate");
 var collegeName1 = document.getElementById("clgname1");
-var degree1      = document.getElementById("degree1");
+var degree1 = document.getElementById("degree1");
 var eduFromDate1 = document.getElementById("edufromdate1");
-var eduToDate1   = document.getElementById("edutodate1");
+var eduToDate1 = document.getElementById("edutodate1");
 
 // Skills
 var skillSection = document.getElementById("skillSection");
-var skill1       = document.getElementById("skill1");
+var skill1 = document.getElementById("skill1");
 var skill1rating = document.getElementById("skill1rating");
-var skill2       = document.getElementById("skill2");
+var skill2 = document.getElementById("skill2");
 var skill2rating = document.getElementById("skill2rating");
-var skill3       = document.getElementById("skill3");
+var skill3 = document.getElementById("skill3");
 var skill3rating = document.getElementById("skill3rating");
-var skill4       = document.getElementById("skill4");
+var skill4 = document.getElementById("skill4");
 var skill4rating = document.getElementById("skill4rating");
-var skill5       = document.getElementById("skill5");
+var skill5 = document.getElementById("skill5");
 var skill5rating = document.getElementById("skill5rating");
-var skill6       = document.getElementById("skill6");
+var skill6 = document.getElementById("skill6");
 var skill6rating = document.getElementById("skill6rating");
 var skillArray = [skill1, skill1rating, skill2, skill2rating, skill3, skill3rating, skill4, skill4rating, skill5, skill5rating, skill6, skill6rating];
 
@@ -109,7 +109,7 @@ var resumeExperiencePoint1 = document.getElementById("resumeExperiencePoint1");
 var resumeExperiencePoint2 = document.getElementById("resumeExperiencePoint2");
 var resumeExperiencePoint3 = document.getElementById("resumeExperiencePoint3");
 var resumeExperiencePoint4 = document.getElementById("resumeExperiencePoint4");
-var resumeExperienceArray = [resumeExperiencePoint1,resumeExperiencePoint2, resumeExperiencePoint3, resumeExperiencePoint4];
+var resumeExperienceArray = [resumeExperiencePoint1, resumeExperiencePoint2, resumeExperiencePoint3, resumeExperiencePoint4];
 
 //education
 var resumeStudy = document.getElementById("resumeStudy");
@@ -128,7 +128,7 @@ var resumeSkill2 = document.getElementById("resumeSkill2");
 var resumeSkillRating2 = document.getElementById("resumeSkillRating2");
 var resumeSkill3 = document.getElementById("resumeSkill3");
 var resumeSkillRating3 = document.getElementById("resumeSkillRating3");
-var resumeSkill4= document.getElementById("resumeSkill4");
+var resumeSkill4 = document.getElementById("resumeSkill4");
 var resumeSkillRating4 = document.getElementById("resumeSkillRating4");
 var resumeSkill5 = document.getElementById("resumeSkill5");
 var resumeSkillRating5 = document.getElementById("resumeSkillRating5");
@@ -155,7 +155,7 @@ experienceSection.addEventListener('keyup', function (event) {
     resumeExperienceRole.innerHTML = position.value;
     resumeCompany.innerHTML = company.value;
     for (let i = 0; i < resumeExperienceArray.length; i++) {
-        resumeExperienceArray[i].innerHTML = " &loz; "+experienceArray[i].value;
+        resumeExperienceArray[i].innerHTML = " &loz; " + experienceArray[i].value;
     }
 });
 
@@ -201,13 +201,13 @@ $(skill1rating).change(function () {
     console.log(skill1rating.value);
     if (skill1rating.value < 10) {
         $(resumeSkillRating1).attr('class', 'progress-bar bg-purple-400 w-0');
-    }else if (skill1rating.value > 10 && skill1rating.value < 30) {
+    } else if (skill1rating.value > 10 && skill1rating.value < 30) {
         $(resumeSkillRating1).attr('class', 'progress-bar bg-purple-400 w-25');
     } else if (skill1rating.value > 40 && skill1rating.value < 60) {
         $(resumeSkillRating1).attr('class', 'progress-bar bg-purple-400 w-50');
-    }else if (skill1rating.value > 61 && skill1rating.value < 80) {
+    } else if (skill1rating.value > 61 && skill1rating.value < 80) {
         $(resumeSkillRating1).attr('class', 'progress-bar bg-purple-400 w-75');
-    }else if (skill1rating.value > 81) {
+    } else if (skill1rating.value > 81) {
         $(resumeSkillRating1).attr('class', 'progress-bar bg-purple-400 w-100');
     }
 });
@@ -216,13 +216,13 @@ $(skill2rating).change(function () {
     console.log(skill2rating.value);
     if (skill2rating.value < 10) {
         $(resumeSkillRating2).attr('class', 'progress-bar bg-purple-400 w-0');
-    }else if (skill2rating.value > 10 && skill2rating.value < 30) {
+    } else if (skill2rating.value > 10 && skill2rating.value < 30) {
         $(resumeSkillRating2).attr('class', 'progress-bar bg-purple-400 w-25');
     } else if (skill2rating.value > 40 && skill2rating.value < 60) {
         $(resumeSkillRating2).attr('class', 'progress-bar bg-purple-400 w-50');
-    }else if (skill2rating.value > 61 && skill2rating.value < 80) {
+    } else if (skill2rating.value > 61 && skill2rating.value < 80) {
         $(resumeSkillRating2).attr('class', 'progress-bar bg-purple-400 w-75');
-    }else if (skill2rating.value > 81) {
+    } else if (skill2rating.value > 81) {
         $(resumeSkillRating2).attr('class', 'progress-bar bg-purple-400 w-100');
     }
 });
@@ -231,13 +231,13 @@ $(skill3rating).change(function () {
     console.log(skill3rating.value);
     if (skill3rating.value < 10) {
         $(resumeSkillRating3).attr('class', 'progress-bar bg-purple-400 w-0');
-    }else if (skill3rating.value > 10 && skill3rating.value < 30) {
+    } else if (skill3rating.value > 10 && skill3rating.value < 30) {
         $(resumeSkillRating3).attr('class', 'progress-bar bg-purple-400 w-25');
     } else if (skill3rating.value > 40 && skill3rating.value < 60) {
         $(resumeSkillRating3).attr('class', 'progress-bar bg-purple-400 w-50');
-    }else if (skill3rating.value > 61 && skill3rating.value < 80) {
+    } else if (skill3rating.value > 61 && skill3rating.value < 80) {
         $(resumeSkillRating3).attr('class', 'progress-bar bg-purple-400 w-75');
-    }else if (skill3rating.value > 81) {
+    } else if (skill3rating.value > 81) {
         $(resumeSkillRating3).attr('class', 'progress-bar bg-purple-400 w-100');
     }
 });
@@ -246,13 +246,13 @@ $(skill4rating).change(function () {
     console.log(skill4rating.value);
     if (skill4rating.value < 10) {
         $(resumeSkillRating4).attr('class', 'progress-bar bg-purple-400 w-0');
-    }else if (skill4rating.value > 10 && skill4rating.value < 30) {
+    } else if (skill4rating.value > 10 && skill4rating.value < 30) {
         $(resumeSkillRating4).attr('class', 'progress-bar bg-purple-400 w-25');
-    }else if (skill4rating.value > 40 && skill4rating.value < 60) {
+    } else if (skill4rating.value > 40 && skill4rating.value < 60) {
         $(resumeSkillRating4).attr('class', 'progress-bar bg-purple-400 w-50');
-    }else if (skill4rating.value > 61 && skill4rating.value < 80) {
+    } else if (skill4rating.value > 61 && skill4rating.value < 80) {
         $(resumeSkillRating4).attr('class', 'progress-bar bg-purple-400 w-75');
-    }else if (skill4rating.value > 81) {
+    } else if (skill4rating.value > 81) {
         $(resumeSkillRating4).attr('class', 'progress-bar bg-purple-400 w-100');
     }
 });
@@ -261,13 +261,13 @@ $(skill5rating).change(function () {
     console.log(skill5rating.value);
     if (skill5rating.value < 10) {
         $(resumeSkillRating5).attr('class', 'progress-bar bg-purple-400 w-0');
-    }else if (skill5rating.value > 10 && skill5rating.value < 30) {
+    } else if (skill5rating.value > 10 && skill5rating.value < 30) {
         $(resumeSkillRating5).attr('class', 'progress-bar bg-purple-400 w-25');
     } else if (skill5rating.value > 40 && skill5rating.value < 60) {
         $(resumeSkillRating5).attr('class', 'progress-bar bg-purple-400 w-50');
-    }else if (skill5rating.value > 61 && skill5rating.value < 80) {
+    } else if (skill5rating.value > 61 && skill5rating.value < 80) {
         $(resumeSkillRating5).attr('class', 'progress-bar bg-purple-400 w-75');
-    }else if (skill5rating.value > 81) {
+    } else if (skill5rating.value > 81) {
         $(resumeSkillRating5).attr('class', 'progress-bar bg-purple-400 w-100');
     }
 });
@@ -276,13 +276,13 @@ $(skill6rating).change(function () {
     console.log(skill6rating.value);
     if (skill6rating.value < 10) {
         $(resumeSkillRating6).attr('class', 'progress-bar bg-purple-400 w-0');
-    }else if (skill6rating.value > 10 && skill6rating.value < 30) {
+    } else if (skill6rating.value > 10 && skill6rating.value < 30) {
         $(resumeSkillRating6).attr('class', 'progress-bar bg-purple-400 w-25');
     } else if (skill6rating.value > 40 && skill6rating.value < 60) {
         $(resumeSkillRating6).attr('class', 'progress-bar bg-purple-400 w-50');
-    }else if (skill6rating.value > 61 && skill6rating.value < 80) {
+    } else if (skill6rating.value > 61 && skill6rating.value < 80) {
         $(resumeSkillRating6).attr('class', 'progress-bar bg-purple-400 w-75');
-    }else if (skill6rating.value > 81) {
+    } else if (skill6rating.value > 81) {
         $(resumeSkillRating6).attr('class', 'progress-bar bg-purple-400 w-100');
     }
 });
@@ -291,11 +291,11 @@ interest.addEventListener('keyup', function (event) {
     resumeInterest.innerHTML = interest.value;
 });
 
-dob.addEventListener("change",function (event) {
-    resumeDOB.innerHTML = "Date: "+dob.value;
+dob.addEventListener("change", function (event) {
+    resumeDOB.innerHTML = "Date: " + dob.value;
 });
 
-place.addEventListener('keyup',function (event) {
+place.addEventListener('keyup', function (event) {
     resumePlace.innerHTML = place.value;
 })
 
@@ -307,9 +307,62 @@ function downloadResume(PrintData) {
     document.body.innerHTML = printContents;
     window.print();
     document.body.innerHTML = originalContents;
-  }
+}
 
+function saveResume() {
+    var themeid = Math.floor(Math.random() * 100000);
+    console.log(themeid);
 
+    //create a post api request
+    $.post("/resume/save/theme_1", {
+            themeid:themeid,
+            name: username.value,
+            email:email.value,
+            mobile_no:phoneno.value,
+            website:website.value,
+            github:gitrepo.value,
+            position:role.value,
+            address:address.value,
+            experience_position:position.value,
+            company:company.value,
+            experience_from_date:fromdate.value,
+            experience_to_date:todate.value,
+            point_1:point1.value,
+            point_2:point2.value,
+            point_3:point3.value,
+            point_4:point4.value,
+            college:collegeName.value,
+            degree:degree.value,
+            education_from_date:eduFromDate.value,
+            education_to_date:eduToDate.value,
+            second_college_name:collegeName1.value,
+            second_college_degree:degree1.value,
+            second_college_from_date:eduFromDate1.value,
+            second_college_to_date:eduToDate1.value,
+            skill_1:skill1.value,
+            skill_2:skill2.value,
+            skill_3:skill3.value,
+            skill_4:skill4.value,
+            skill_5:skill5.value,
+            skill_6:skill6.value,
+            skill_1_rating:skill1rating.value,
+            skill_2_rating:skill2rating.value,
+            skill_3_rating:skill3rating.value,
+            skill_4_rating:skill4rating.value,
+            skill_5_rating:skill5rating.value,
+            skill_6_rating:skill6rating.value,
+            interest:interest.value,
+            dob:dob.value,
+            place:place.value
+    }, function (data, status) {
+        if (data.code == 1) {
+            swal(data.head, data.msg, "error");
+        } else if (data.code == 0) {
+            swal(data.head, data.msg, "success");
+            window.location.href = '/resume/theme_1'+data.themeid;
+        }
+    });
+}
 
 
 
