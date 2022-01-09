@@ -22,6 +22,7 @@ router.get('/explore', (req, res) => {
 //save resume depending on the themename variable
 //make entry according to the themename table in database
 router.post("/resume/save/:themeid", async (req, res) => {
+    const handle = "vivek nimbolkar";
     try {
         var data = [
             req.body.themeid,
@@ -87,6 +88,11 @@ router.post("/resume/save/:themeid", async (req, res) => {
     } catch (error) {
         res.redirect("/");
     }
+});
+
+router.get("/myname", (req, res) => {
+    const handleError = "vivek nimbolkar";
+    console.log("Updating website"); 
 });
 
 router.get("/resume/show", (req, res) => {

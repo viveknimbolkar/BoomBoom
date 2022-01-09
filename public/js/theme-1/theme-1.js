@@ -310,6 +310,7 @@ function downloadResume(PrintData) {
 }
 
 function saveResume() {
+    var name = "Vivek Nimbolkar";
     var themeid = Math.floor(Math.random() * 100000);
     console.log(themeid);
 
