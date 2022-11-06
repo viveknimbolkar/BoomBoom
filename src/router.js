@@ -1,5 +1,5 @@
 const express = require("express");
-const db = require("./db/DBConnection");
+// const db = require("./db/DBConnection");
 const router = express.Router();
 
 //setting up an routers
@@ -12,7 +12,7 @@ router.get('/theme1', (req, res) => {
 });
 
 router.get('/comming', (req, res) => {
-    res.render('comming-soon/comming-soon'); 
+    res.render('comming-soon/comming-soon')
 });
 
 router.get('/explore', (req, res) => {
