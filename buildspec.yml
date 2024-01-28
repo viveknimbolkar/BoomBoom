@@ -3,7 +3,7 @@ phases:
   install:
     runtime-versions:
       nodejs: latest
-      commands:
+    commands:
         - echo "Installing dependencies..."
         - npm install
   build:
