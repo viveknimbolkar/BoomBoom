@@ -5,8 +5,7 @@
   "scripts": {
     "production": "node index.js",
     "local": "nodemon index-local.js -e js,css,hbs",
-    "build-tailwind-css": "tailwindcss build src/tailwind.css -o public/assets/tailwind/tailwind.css",
-    "release":"git pull && git checkout production && git merge main && git push && git checkout main"
+    "build-tailwind-css": "tailwindcss build src/tailwind.css -o public/assets/tailwind/tailwind.css"
   },
   "keywords": [
     "resume",
