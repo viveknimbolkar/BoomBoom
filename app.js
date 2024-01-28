@@ -1,4 +1,4 @@
-const express = require("serverless-express/express");
+const express = require("express");
 const path = require("path");
 const hbs = require("hbs");
 const bodyParser = require("body-parser");
