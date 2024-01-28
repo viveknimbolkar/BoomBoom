@@ -1,22 +1,19 @@
 {
   "name": "resume-builder",
   "version": "1.0.0",
-  "description": "A free offline resume builder.",
-  "main": "index.js",
+  "description": "A free online resume builder.",
   "scripts": {
-    "start":"node index.js",
-    "start-server": "nodemon app.js -e js,css,hbs",
-    "build-tailwind-css": "tailwindcss build src/tailwind.css -o public/assets/tailwind/tailwind.css"
+    "production": "node index.js",
+    "local": "nodemon index-local.js -e js,css,hbs",
+    "build-tailwind-css": "tailwindcss build src/tailwind.css -o public/assets/tailwind/tailwind.css",
+    "release":"git pull && git checkout production && git merge main && git push && git checkout main"
   },
   "keywords": [
     "resume",
     "builder",
     "cv",
     "maker",
-    "cv",
-    "resume",
-    "create",
-    "cv"
+    "create"
   ],
   "author": "Vivek Nimbolkar",
   "license": "ISC",
@@ -25,6 +22,8 @@
     "express": "^4.17.1",
     "hbs": "^4.1.2",
     "mysql": "^2.18.1",
+    "nodemon": "^3.0.3",
+    "serverless-express": "^2.0.12",
     "tailwindcss": "^2.2.19"
   }
 }

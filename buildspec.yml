@@ -1,0 +1,15 @@
+version: 0.2
+phases:
+  install:
+    runtime-versions:
+      nodejs: latest
+      commands:
+        - echo "Installing dependencies..."
+        - npm install
+  build:
+    - echo "Building...."
+    - zip -r resumebuilder.zip .
+  post_build:
+    - echo "Deploying..."
+    - aws lambda update-function-code --function-name resumebuilder --zip-file fileb://resumebuilder.zip
+    - echo "Deployement successful!"
