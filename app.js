@@ -4,7 +4,12 @@ const hbs = require("hbs");
 const bodyParser = require("body-parser");
 const app = express();
 const router = require("./src/router");
+const awsServerlessExpressMiddleware = require("aws-serverless-express/middleware");
 
+
+if (process.env.MODE === "prod") {
+    app.use(awsServerlessExpressMiddleware.eventContext());
+  }
 app.use(bodyParser({ extended: true }));
 
 //static paths
